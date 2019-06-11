@@ -41,7 +41,7 @@ Important keywords are `self-contained` and `stateless`
 * Do not repeat works. Increase reusability.
 * Easier testing and debugging :D Because funcs can be easly tested in isolation. Do test for seperated unit is much more easier and well-defined.
 
-## Disavantages
+## Problems
 #### 1. Mutable object
 Most of objects provided by default are mutable, array, string, dictionary,...
 So mutable object can ruin the thing we tryna to achive in FP, stateless. \
