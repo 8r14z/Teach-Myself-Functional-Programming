@@ -47,7 +47,7 @@ Most of objects provided by default are mutable, array, string, dictionary,...
 So mutable object can ruin the thing we try to achive in FP, stateless. \
 **Solution**: Use immutable objects for doing FP to avoid some mistakes, prevent us from changing. And immutable objects make code safer when dealing with concurrence.
 #### 2. Copy
-Solving the problem by using immutable brings us another problem. We have to make a bunch of copies for an object.
+Solving the problem by using `immutable` brings us another problem. We have to make a bunch of copies for an object.
 
 ## Conclusion
 We should have the bridge for FP and normally imperative world. Because we have to do something that is not kind of FP actually like write database, update data source for tableview,... In the real world project, it's necessary to combine 2 both of them. So use this `bridge` to update state and keep FP world just be stateless as usual. We can use some data structures to achive this thing. For example, we can use a queue for all updated state requests, add updated request to the queue and the other side of the bidge (live in imperative world) will carry updating stuff.
