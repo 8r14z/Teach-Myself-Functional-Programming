@@ -1,5 +1,5 @@
 # Functional Programming
-Teach my self functional programming
+Teach myself functional programming
 
 ## What is functional programming? 
 "The functional programming paradigm was explicitly created to support a pure functional approach to problem solving. Functional programming is a form of declarative programming. In contrast, most mainstream languages, including object-oriented programming (OOP) languages such as C#, Visual Basic, C++, and Java, were designed to primarily support imperative (procedural) programming."
