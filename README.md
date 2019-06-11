@@ -33,8 +33,7 @@ So mutable object can ruin the thing we tryna to achive in FP, stateless. \
 #### 2. Copy
 Solving the problem by using immutable brings us another problem. We have to make a bunch of copies for an object.
 
-
-> We have to have the bridge for fp vs normally imperative programming
+> We should have the bridge for fp and normally imperative world. Because we have to do something that is not kind of FP actually like write database.
 
 ## Characteristics
 | Characteristic | Imperative | Functional |
