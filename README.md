@@ -10,14 +10,14 @@ All languages that support function pointer can be used to achieve functional pr
 > Functional programming is nothing more than using functions to communicate with your co-workers and solve problems.
 
 Different between Imperative and Functional approach
-* Imperative: write code that describes in detail the steps that computer must take to accomplish the goal
+* Imperative: write code that describes in detail the steps that computer must take to accomplish the goal. Create a variable and then change it value (state). Changing value of a variable can make side effects.
 ```swift
 // Sum 2 integers - Imperative approach
 let a = 10
 let b = 11
 let sum = a + b
 ```
-* Functional: compose the problem as a set of functions to be excuted. Define the input and ouput for each function. 
+* Functional: compose the problem as a set of functions to be excuted. Define the input and ouput for each function. Self-contained means unit of code or function has its own enviroment and should not know anything about outside, so it can not change any state outside - stateless. So that it won't have any side effects, specially when working in multi-threading enviroment. 
 ```swift
 // Sum 2 integers - Functional approach
 let sum = sum(a, b) // Call a func to solve problem
