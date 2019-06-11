@@ -52,6 +52,9 @@ Solving the problem by using `immutable` brings us another problem. We have to m
 ## Conclusion
 We should have the bridge for FP and normally imperative world. Because we have to do something that is not kind of FP actually like write database, update data source for tableview,... In the real world project, it's necessary to combine 2 both of them. So use this `bridge` to update state and keep FP world just be stateless as usual. We can use some data structures to achive this thing. For example, we can use a queue for all updated state requests, add updated request to the queue and the other side of the bidge (live in imperative world) will carry updating stuff.
 
+## Example 
+`map`, `compactMap`, `filter`, `reduce` are good examples for implemetation of FP.
+
 ## References
 * [Functional Programming in 40 minutes](https://www.youtube.com/watch?v=0if71HOyVjY)
 * [Introduction to Functional Programming - Raywenderlich](https://www.raywenderlich.com/9222-an-introduction-to-functional-programming-in-swift)
