@@ -33,8 +33,6 @@ So mutable object can ruin the thing we tryna to achive in FP, stateless. \
 #### 2. Copy
 Solving the problem by using immutable brings us another problem. We have to make a bunch of copies for an object.
 
-> We should have the bridge for FP and normally imperative world. Because we have to do something that is not kind of FP actually like write database, update data source for tableview,... In the real world project, it's necessary to combine 2 both of them. So use this `bridge` to update state and keep FP world just be stateless as usual.
-
 ## Characteristics
 | Characteristic | Imperative | Functional |
 |----------------|------------|------------|
@@ -49,6 +47,9 @@ Important keywords are `self-contained` and `stateless`
 * Increased readability. This is because each func is designed to solve a specific task and does not reply on any external state.
 * Do not repeat works. Increase reusability.
 * Easier testing and debugging :D Because funcs can be easly tested in isolation. Do test for seperated unit is much more easier and well-defined.
+
+## Conclusion
+We should have the bridge for FP and normally imperative world. Because we have to do something that is not kind of FP actually like write database, update data source for tableview,... In the real world project, it's necessary to combine 2 both of them. So use this `bridge` to update state and keep FP world just be stateless as usual. We can use some data structures to achive this thing. For example, we can use a queue for all updated state requests, add updated request to the queue and the other side of the bidge (live in imperative world) will carry updating stuff.
 
 ## References
 * [Functional Programming in 40 minutes](https://www.youtube.com/watch?v=0if71HOyVjY)
