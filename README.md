@@ -44,7 +44,7 @@ Important keywords are `self-contained` and `stateless`
 ## Problems
 #### 1. Mutable object
 Most of objects provided by default are mutable, array, string, dictionary,...
-So mutable object can ruin the thing we tryna to achive in FP, stateless. \
+So mutable object can ruin the thing we try to achive in FP, stateless. \
 **Solution**: Use immutable objects for doing FP to avoid some mistakes, prevent us from changing. And immutable objects make code safer when dealing with concurrence.
 #### 2. Copy
 Solving the problem by using immutable brings us another problem. We have to make a bunch of copies for an object.
