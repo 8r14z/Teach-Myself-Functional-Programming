@@ -60,7 +60,7 @@ for i in 0..<(n - 1) {
 }   
 ```
 * We go through step to step to get the final result.
-* State of `array` is changed.
+* State of `array` is changed. Can understand the `array` here is like a property of class.
 
 #### Functional Programming
 ```swift
