@@ -25,13 +25,6 @@ let sum = sum(a, b) // Call a func to solve problem
 
 ### My definition
 > The main idea for functional programming is `Mathematical function` that you can not manipulate, just produce an output nothing else, that is something called `stateless` :D Put the same input and always get the same output - no side effects. We don't have to scan whole code file to see whether or not the variable is changed. This is because it's never changed.
-### Problems
-#### 1. Mutable object
-Most of objects provided by default are mutable, array, string, dictionary,...
-So mutable object can ruin the thing we tryna to achive in FP, stateless. \
-**Solution**: Use immutable objects for doing FP to avoid some mistakes, prevent us from changing. And immutable objects make code safer when dealing with concurrence.
-#### 2. Copy
-Solving the problem by using immutable brings us another problem. We have to make a bunch of copies for an object.
 
 ## Characteristics
 | Characteristic | Imperative | Functional |
@@ -47,6 +40,14 @@ Important keywords are `self-contained` and `stateless`
 * Increased readability. This is because each func is designed to solve a specific task and does not reply on any external state.
 * Do not repeat works. Increase reusability.
 * Easier testing and debugging :D Because funcs can be easly tested in isolation. Do test for seperated unit is much more easier and well-defined.
+
+## Disavantages
+#### 1. Mutable object
+Most of objects provided by default are mutable, array, string, dictionary,...
+So mutable object can ruin the thing we tryna to achive in FP, stateless. \
+**Solution**: Use immutable objects for doing FP to avoid some mistakes, prevent us from changing. And immutable objects make code safer when dealing with concurrence.
+#### 2. Copy
+Solving the problem by using immutable brings us another problem. We have to make a bunch of copies for an object.
 
 ## Conclusion
 We should have the bridge for FP and normally imperative world. Because we have to do something that is not kind of FP actually like write database, update data source for tableview,... In the real world project, it's necessary to combine 2 both of them. So use this `bridge` to update state and keep FP world just be stateless as usual. We can use some data structures to achive this thing. For example, we can use a queue for all updated state requests, add updated request to the queue and the other side of the bidge (live in imperative world) will carry updating stuff.
