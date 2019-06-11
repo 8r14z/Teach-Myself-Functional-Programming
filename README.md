@@ -33,7 +33,7 @@ So mutable object can ruin the thing we tryna to achive in FP, stateless. \
 #### 2. Copy
 Solving the problem by using immutable brings us another problem. We have to make a bunch of copies for an object.
 
-> We should have the bridge for fp and normally imperative world. Because we have to do something that is not kind of FP actually like write database.
+> We should have the bridge for FP and normally imperative world. Because we have to do something that is not kind of FP actually like write database, update data source for tableview,... In the real world project, it's necessary to combine 2 both of them. So use this `bridge` to update state and keep FP world just be stateless as usual.
 
 ## Characteristics
 | Characteristic | Imperative | Functional |
