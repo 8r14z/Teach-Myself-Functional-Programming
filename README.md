@@ -41,6 +41,35 @@ Important keywords are `self-contained` and `stateless`
 * Do not repeat works. Increase reusability.
 * Easier testing and debugging :D Because funcs can be easly tested in isolation. Do test for seperated unit is much more easier and well-defined.
 
+## Example 
+`map`, `compactMap`, `filter`, `reduce` are good examples for implemetation of FP. \
+Sort array of integer
+#### Imperative approach
+```swift
+var array = [1,6,12,2,4]
+let n = array.count
+// Bubble sort
+for i in 0..<(n - 1) {
+    for j in i+1..<n {
+        if array[i] > array[j] {
+            let tmp = array[i]
+            array[i] = array[j]
+            array[j] = tmp
+        }
+    }
+}   
+```
+* We go through step to step to get the final result.
+* State of `array` is changed.
+
+#### Functional Programming
+```swift
+let array = [1,6,12,2,4]
+let sortedArray = array.sorted()
+```
+* Just call a function to solve the problem.
+* Remain state of `array`.
+
 ## Problems
 #### 1. Mutable object
 Most of objects provided by default are mutable, array, string, dictionary,...
@@ -51,9 +80,6 @@ Solving the problem by using `immutable` brings us another problem. We have to m
 
 ## Conclusion
 We should have the bridge for FP and normally imperative world. Because we have to do something that is not kind of FP actually like write database, update data source for tableview,... In the real world project, it's necessary to combine 2 both of them. So use this `bridge` to update state and keep FP world just be stateless as usual. We can use some data structures to achive this thing. For example, we can use a queue for all updated state requests, add updated request to the queue and the other side of the bidge (live in imperative world) will carry updating stuff.
-
-## Example 
-`map`, `compactMap`, `filter`, `reduce` are good examples for implemetation of FP.
 
 ## References
 * [Functional Programming in 40 minutes](https://www.youtube.com/watch?v=0if71HOyVjY)
