@@ -115,7 +115,7 @@ Anyway, the root implementation of a functional method actually has the imperati
     return Array(result)
   }
 ```
-It is quite the same as the imperative approach, isn't it? :D YESSSSS.
+It is quite the same as the imperative approach, isn't it? :D YEEEES, it is.
 
 ## Key takeaways
 * Instead of thinking about this imperatively, think of it declaratively, i.e. by only thinking about what you want to happen instead of how (step by step). 
