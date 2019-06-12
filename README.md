@@ -95,7 +95,7 @@ Solving the problem by using `immutable` brings us another problem. We have to m
 ## Combine Functional Programming vs Imperative Programming
 We should have the bridge for FP and normally imperative world. Because we have to do something that is not kind of FP actually like write database, update data source for table views,… In the real world project, it’s necessary to combine 2 of them. So use this `bridge` to update state and keep FP world just be stateless as usual. We can use some data structures to achieve this thing. For example, we can use a queue for all updated state requests, add updated request to the queue and the other side of the bridge (live in imperative world) will carry updating stuff.
 
-Anyway, the root implementation of a functional method actually has the imperative look. It will be great if we can combine both together. Following is how `filter` is implemented in Swift open source at `https://github.com/apple/swift/blob/master/stdlib/public/core/Sequence.swift`.
+The root implementation of any functional method actually has the imperative look. It will be great if we can combine both together. Following is how `filter` is implemented in Swift open source at `https://github.com/apple/swift/blob/master/stdlib/public/core/Sequence.swift`.
 ```swift
 @_transparent
   public func _filter(
@@ -115,7 +115,7 @@ Anyway, the root implementation of a functional method actually has the imperati
     return Array(result)
   }
 ```
-It is quite the same as the imperative approach, isn't it? :D YEEEES, it is.
+It is quite the same as the imperative approach, isn't it? :D YEEEES, it is. It goes step by step. But it's still stateless, persistent and call `isIncluded`  function to solve the problem. So this is exactly a functional programming method :D
 
 ## Key takeaways
 * Instead of thinking about this imperatively, think of it declaratively, i.e. by only thinking about what you want to happen instead of how (step by step). 
