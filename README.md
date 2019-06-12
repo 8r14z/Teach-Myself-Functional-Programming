@@ -18,7 +18,7 @@ let sum = a + b
 * Functional: compose the problem as a set of functions to be executed. Define the input and output for each function. Self-contained means a unit of code or function has its environment and should not know anything about outside, so it can not change any state outside — stateless. So that it won’t have any side effects, especially when working in a multi-threading environment. 
 ```swift
 // Sum 2 integers — Functional approach
-let sum = sum(a, b) // Call a function to solve problem
+let sum = sum(a, b)
 ```
 ### My definition
 > The main idea for functional programming is `Mathematical function` that you can not manipulate. That is something called `stateless` :D Put the same input and always get the same output — no side effects. We don’t have to scan the whole code file to see whether or not the variable is changed. This is because it’s never changed.
