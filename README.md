@@ -25,7 +25,7 @@ let sum = sum(a, b) // Call a function to solve problem
 ### First-class citizens and higher-order functions
 In FP, functions are **first-class citizens**. It means that you treat functions like other objects. So that functions can also accept other functions as parameters or return other functions. Functions that accept or return other functions are called **higher-order functions**. The most common higher-order functions in Swift are `filter`, `map`, `reduce`.
 
-### Some types of FP:
+### Concepts in FP
 * **Partial functions**: allow you to encapsulate one within another.
 ```swift
 func intersection(with set: Set<Int>) -> (Set<Int>) -> Set<Int> {
@@ -38,7 +38,7 @@ let findIntersection = intersection(with: [1,2,3])
 let intersection = findIntersection([1,3,4])
 ```
 * **Pure functions**: the main idea for FP - same as `Mathematical functions`. This stateless approach helps your write good unit test for functions. The same input produces the same output, it's easy to detect error in implementation when having any changes. 
-
+* **Recursion**:  in functional languages, recursion replaces many of the looping constructs that you use in imperative languages. Keep in mind that recursive functions have extra memory usage and runtime overhead.
 
 ## Characteristics
 | Characteristic | Imperative | Functional |
@@ -97,7 +97,10 @@ We should have the bridge for FP and normally imperative world. Because we have 
 ## Key takeaways
 * Instead of thinking about this imperatively, think of it declaratively, i.e. by only thinking about what you want to happen instead of how (step by step). 
 * Your declarative (FP) code is easier to read and you can figure out how it works without too much trouble.
+* Swift is not purely a functional language, but it does combine multiple programming paradigms. A great place to start working with FP techniques is in your Model layer and anywhere that your app’s business logic appears. You’ve seen how easy it is to create discrete tests for that logic.
 
 ## References
 * [Functional Programming in 40 minutes](https://www.youtube.com/watch?v=0if71HOyVjY)
 * [Introduction to Functional Programming - Raywenderlich](https://www.raywenderlich.com/9222-an-introduction-to-functional-programming-in-swift)
+* [Swift Fucntional Programming Tutorial](https://www.raywenderlich.com/2273-swift-functional-programming-tutorial)
+* [Swift and the Legacy of Functional Programming](https://academy.realm.io/posts/tryswift-rob-napier-swift-legacy-functional-programming/)
