@@ -26,6 +26,9 @@ let sum = sum(a, b) // Call a func to solve problem
 ### My definition
 > The main idea for functional programming is `Mathematical function` that you can not manipulate, just produce an output nothing else, that is something called `stateless` :D Put the same input and always get the same output - no side effects. We don't have to scan whole code file to see whether or not the variable is changed. This is because it's never changed.
 
+### First-class citizens and higher-order functions
+In FP, functions are **first-class citizens**. It means that you treat functions like other objects. So that functons can also accept other functions as parameters or return other functions. Functions that accept or return other functions are called **higher-order functions**. The most common higher-order functions in swift are `filter`, `map`, `reduce`.
+
 ## Characteristics
 | Characteristic | Imperative | Functional |
 |----------------|------------|------------|
@@ -78,8 +81,12 @@ So mutable object can ruin the thing we try to achive in FP, stateless. \
 #### 2. Copy, copy, copy a lot
 Solving the problem by using `immutable` brings us another problem. We have to make a bunch of copies for an object.
 
-## Conclusion
+## Combine Functional Programming vs Imperative Programming
 We should have the bridge for FP and normally imperative world. Because we have to do something that is not kind of FP actually like write database, update data source for tableview,... In the real world project, it's necessary to combine 2 both of them. So use this `bridge` to update state and keep FP world just be stateless as usual. We can use some data structures to achive this thing. For example, we can use a queue for all updated state requests, add updated request to the queue and the other side of the bidge (live in imperative world) will carry updating stuff.
+
+## Key takeaways
+* Instead of thinking about this imperatively, think of it declaratively, i.e. by only thinking about what you want to happen instead of how (step by step). 
+* Your declarative (FP) code is easier to read and you can figure out how it works without too much trouble.
 
 ## References
 * [Functional Programming in 40 minutes](https://www.youtube.com/watch?v=0if71HOyVjY)
