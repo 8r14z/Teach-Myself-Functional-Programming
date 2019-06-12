@@ -95,6 +95,27 @@ Solving the problem by using `immutable` brings us another problem. We have to m
 ## Combine Functional Programming vs Imperative Programming
 We should have the bridge for FP and normally imperative world. Because we have to do something that is not kind of FP actually like write database, update data source for table views,… In the real world project, it’s necessary to combine 2 of them. So use this `bridge` to update state and keep FP world just be stateless as usual. We can use some data structures to achieve this thing. For example, we can use a queue for all updated state requests, add updated request to the queue and the other side of the bridge (live in imperative world) will carry updating stuff.
 
+Anyway, the root implementation of a functional method definitely follows the imperative approach. It will be great if we can combine both together. Below is filter's implementation in Swift open source at `https://github.com/apple/swift/blob/master/stdlib/public/core/Sequence.swift`
+```swift
+@_transparent
+  public func _filter(
+    _ isIncluded: (Element) throws -> Bool
+  ) rethrows -> [Element] {
+
+    var result = ContiguousArray<Element>()
+
+    var iterator = self.makeIterator()
+
+    while let element = iterator.next() {
+      if try isIncluded(element) {
+        result.append(element)
+      }
+    }
+
+    return Array(result)
+  }
+```
+
 ## Key takeaways
 * Instead of thinking about this imperatively, think of it declaratively, i.e. by only thinking about what you want to happen instead of how (step by step). 
 * Your declarative (FP) code is easier to read, and you can figure out how it works without too much trouble.
