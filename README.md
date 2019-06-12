@@ -42,7 +42,7 @@ let intersection = findIntersection([1,3,4])
 
 ## Characteristics
 | Characteristic | Imperative | Functional |
-| - - - - - - - - | - - - - - - | - - - - - - |
+|----------------|------------|------------|
 |Programmer focus|How to perform tasks (algorithms) and how to track changes in state|What information is desired and what transformations are required.|
 |Status changes|Important|Non-existent|
 |Order of excution|Important|Low importance|
