@@ -115,7 +115,21 @@ The root implementation of any functional method actually has the imperative loo
     return Array(result)
   }
 ```
-It is quite the same as the imperative approach, isn't it? :D YEEEES, it is. It goes step by step. But it's still stateless, persistent and call `isIncluded`  function to solve the problem. 
+It is quite the same as the imperative approach, isn't it? :D YEEEES, it is. It goes step by step. But it's still stateless, persistent and call `isIncluded` function to solve the problem. It should use recursion in this case, but anyway Swift is not a pure functional language so it's ok :D
+```swift
+func filter(_ isIncluded: (Element) -> Bool) -> [Element] {
+
+    guard let first = first else {
+        return []
+    }
+    
+    if isIncluded(first) {
+        return [first] + self[1..<endIndex].filter(isIncluded)
+    } else {
+        return self[1..<endIndex].filter(isIncluded)
+    }
+}
+```
 
 ## Key takeaways
 * Instead of thinking about this imperatively, think of it declaratively, i.e. by only thinking about what you want to happen instead of how (step by step). 
