@@ -141,3 +141,4 @@ func filter(_ isIncluded: (Element) -> Bool) -> [Element] {
 * [Introduction to Functional Programming - Raywenderlich](https://www.raywenderlich.com/9222-an-introduction-to-functional-programming-in-swift)
 * [Swift Functional Programming Tutorial](https://www.raywenderlich.com/2273-swift-functional-programming-tutorial)
 * [Swift and the Legacy of Functional Programming](https://academy.realm.io/posts/tryswift-rob-napier-swift-legacy-functional-programming/)
+* [Swift Is Not Functional](http://robnapier.net/swift-is-not-functional)
